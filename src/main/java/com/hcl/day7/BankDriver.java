@@ -27,5 +27,19 @@ public class BankDriver {
 		acct1.processCheck(check2);
 		System.out.println(acct1);
 		System.out.println(acct2);
+
+		System.out.println(">>>> Initialize a savings account");
+		SavingsAccount acct3 = new SavingsAccount("Janet", 1000, .05);
+		System.out.println(acct3);
+
+		System.out.println(">>>> Savings account after 1 month");
+		acct3.depositMonthlyInterest();
+		System.out.println(acct3);
+
+		System.out.println(">>>> Savings account after 1 year");
+		for (int i = 0; i < 11; i++) {
+			acct3.depositMonthlyInterest();
+		}
+		System.out.println(acct3);
 	}
 }
